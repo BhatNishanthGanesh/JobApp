@@ -3,7 +3,7 @@ import { ActivityIndicator, FlatList, Image, TouchableOpacity, View } from 'reac
 import { Stack, useRouter, useSearchParams } from 'expo-router'
 import { Text, SafeAreaView } from 'react-native'
 import axios from 'axios'
-
+import RAPID_API from '@env'
 import { ScreenHeaderBtn, NearbyJobCard } from '../../components'
 import { COLORS, icons, SIZES } from '../../constants'
 import styles from '../../styles/search'
@@ -26,7 +26,7 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": '35b58cf981msh3069d4097e4f958p1d8524jsnc795b33d8285',
+                    "X-RapidAPI-Key": RAPID_API,
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                 },
                 params: {
